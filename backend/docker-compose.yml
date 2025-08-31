@@ -11,7 +11,7 @@ services:
       - redis_data:/data
 
   timescaledb:
-    image: timescale/timescaledb-ha:pg14-latest
+    image: timescale/timescaledb:latest-pg17
     container_name: timescaledb
     platform: linux/amd64
     environment:
