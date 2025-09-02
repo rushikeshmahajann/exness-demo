@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/index.js",
     "build": "tsc -b",
-    "dev:poller": "node --loader ts-node/esm src/poller/poller.ts"
+    "dev:poller": "node --loader ts-node/esm src/poller/poller.ts",
+      "dev:batch-uploader": "node --loader ts-node/esm src/timescaleDB/setup-timescale.ts"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "ioredis": "^5.7.0",
     "pg": "^8.16.3",
     "prisma": "^6.14.0",
     "redis": "^5.8.2",
