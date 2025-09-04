@@ -38,7 +38,8 @@ ws.on("error", (err: string) => {
 })
 
 ws.on("close", ()=> {
-    console.log("websocket disconnected, consider reconnect logic");
+    console.log("websocket disconnected, trying to reconnect");
+
     
 })
 

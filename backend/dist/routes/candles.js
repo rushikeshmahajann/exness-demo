@@ -56,7 +56,7 @@ router.get('/candles', async (req, res) => {
         `;
         const result = await pool.query(query, [symbol, Number(start_time), Number(end_time)]);
         const formattedData = result.rows.map(row => ({
-            time: row.time,
+            time: Math.floor(row.time),
             open: parseFloat(row.open),
             high: parseFloat(row.high),
             low: parseFloat(row.low),
